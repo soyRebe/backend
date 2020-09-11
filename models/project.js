@@ -1,5 +1,5 @@
 'use strict'
-const moongose = require('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ProjectSchema = Schema ({
@@ -7,8 +7,9 @@ const ProjectSchema = Schema ({
     description: String,
     category: String,
     year: Number,
-    langs: [String]
+    langs: String,
+    image : String,
 });
 
-module.exports = moongose.model('Project', ProjectSchema);
+module.exports = mongoose.model('Project', ProjectSchema);
 // projects --> guarda los documentos en la coleccion
